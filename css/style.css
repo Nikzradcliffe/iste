@@ -1,0 +1,314 @@
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  background: none;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+
+#section-start {
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0.55fr 1fr 0.4fr 0.8fr;
+  
+  overflow: hidden;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#img-holder {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+#img-holder img {
+  max-width: 10%;
+  max-height: auto;
+}
+
+#title-container{
+
+}
+
+#title-container h1,
+h3 {
+  text-align: center;
+}
+
+#title-container h1 {
+  font-size: 4.5rem;
+}
+
+#title-container h3 {
+  font-size: 2rem;
+}
+
+
+
+#events-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  
+  padding: auto 30% auto 30%;
+}
+
+.event-btn {
+  margin-top: 20px;
+  border-radius: 30px !important;
+  width: 150px;
+  background-color: black !important;
+  border: solid 1px white !important;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-btn:hover {
+  background-color: white !important;
+  border: solid 1px black !important;
+  color: black;
+}
+
+#talks-btn {
+  margin-right: 5%;
+}
+
+#events-btn {
+
+}
+
+#workshops-btn {
+  margin-left: 5%;
+}
+
+#start-reg-btn {
+  margin-top: 30px;
+  border-radius: 30px;
+  width: 150px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#start-reg-btn:hover {
+  background-color: yellow !important;
+  border: solid 1px black !important;
+  color: black;
+}
+
+#scroll-btn {
+  color: white;
+  font-size: 4rem;
+}
+
+#scroll-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+#scroll-btn i:hover {
+  animation: none;
+  cursor: pointer;
+}
+
+#scroll-btn i {
+  margin: 60px auto 0% auto;
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  12.5% {
+    opacity: 0.25;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  37.5% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  62.5% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  87.5% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.details-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.column1 {
+  flex: 50%;
+}
+
+#details-theme img {
+  max-width: 85%;
+  margin-left: 10%;
+  height: auto;
+}
+
+.theme {
+  color: white;
+  padding-right: 5%;
+  font-size: 1.3rem;
+}
+
+#details-people {
+  margin-top: 30px;
+  padding-left: 5%;
+}
+
+#details-people img {
+  max-width: 90%;
+  margin-right: 10%;
+  height: auto;
+}
+
+#details-where {
+  margin-top: 30px;
+}
+
+#details-where img {
+  max-width: 90%;
+  margin-left: 5%;
+  height: auto;
+  margin-right: 5%;
+}
+
+#events-main h1 {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 3.5rem;
+  color: aliceblue;
+  font-weight: 800 !important;
+}
+
+#section-events {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  max-width: 100%;
+}
+.event-box {
+  margin: 20px auto 20px auto;
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+.event-box img {
+  border-radius: 15px 15px 0 0;
+}
+
+.event-box h3 {
+  border: solid white 2px;
+  border-radius: 0 0 15px 15px;
+}
+
+@media screen and (max-width: 1100px) {
+
+  html {
+    font-size: 85%;
+  }
+  #section-events {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .details-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .column1 {
+    flex: 50%;
+  }
+  #theme1{
+    padding-left: 5%;
+  }
+  #theme2{}
+  #theme3{
+    padding-left: 5%;
+  }
+
+@media screen and (max-width: 768px) {
+  html{
+    font-size: 70%;
+  }
+
+
+
+  #events-holder {
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #talks-btn,#workshops-btn{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #section-events {
+    grid-template-columns: 1fr;
+  }
+}
